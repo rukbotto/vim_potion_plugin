@@ -2,5 +2,5 @@
 
 Plugin made by following Steve Losh tutorial.
 
-http://learnvimscriptthehardway.stevelosh.com/
+[Learn Vim The Hard Way](http://learnvimscriptthehardway.stevelosh.com/)
 
