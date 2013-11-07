@@ -3,11 +3,13 @@ if !exists("g:potion_command")
 endif
 
 function! PotionCompileAndRunFile()
+    write
     silent !clear
     execute "!" . g:potion_command . " " . bufname("%")
 endfunction
 
 function! PotionShowBytecode()
+    write
     let bytecode = system(g:potion_command . " -c -V " . bufname("%"))
 
     vsplit __Potion_Bytecode__
