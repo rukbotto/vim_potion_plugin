@@ -8,21 +8,22 @@ syntax keyword potionKeyword class return
 
 syntax keyword potionFunction print join string
 
-syntax match potionComment "\v#.*$"
+syntax match potionComment /\v#.*$/
 
-syntax match potionOperator "\v\*"
-syntax match potionOperator "\v/"
-syntax match potionOperator "\v\+"
-syntax match potionOperator "\v\-"
-syntax match potionOperator "\v\?"
-syntax match potionOperator "\v\="
-syntax match potionOperator "\v\*\="
-syntax match potionOperator "\v/\="
-syntax match potionOperator "\v\+\="
-syntax match potionOperator "\v-\="
+syntax match potionOperator /\v\*/
+syntax match potionOperator /\v\//
+syntax match potionOperator /\v\+/
+syntax match potionOperator /\v\-/
+syntax match potionOperator /\v\?/
+syntax match potionOperator /\v\=/
+syntax match potionOperator /\v\*\=/
+syntax match potionOperator /\v\/\=/
+syntax match potionOperator /\v\+\=/
+syntax match potionOperator /\v-\=/
 
-syntax match potionNumber "\v-?\.?\d(e[\+-])?"
-syntax match potionNumber "\v0x[A-F]+"
+syntax match potionNumber /\v<\d+\.?\d*>/
+syntax match potionNumber /\v<\d+\.?\d*e[\+-]\d+>/
+syntax match potionNumber /\v<0x[0-9A-F]+>/
 
 syntax region potionString start=/\v"/ skip=/\v\\./ end=/\v"/
 
